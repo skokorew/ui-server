@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="lines-app" class="container-fluid">
+        <h1>Lines:</h1>
+        <div id="lines-table">
+            <div data-find="line-row" v-for="line in lines" class="row">
+                <div data-find="line-id" class="col-sm-1">{{ line.lineId }}</div>
+                <div data-find="line-name" class="col-sm-8">{{ line.lineChars }}</div>
+            </div>
+        </div>
+        <form class="form-inline">
+            <input v-model="newLineName" type="text" class="form-control" id="line-name" placeholder="line name">
+            <button id="line-add-button" v-on:click="addLine" type="submit" class="btn btn-primary mb-2">Add line</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
