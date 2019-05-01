@@ -20,7 +20,10 @@
         </div>
         <form class="form-inline">
             <input v-model="newLineName" type="text" class="form-control" id="line-name" placeholder="line name">
-            <button id="line-add-button" v-on:click="addLine" type="submit" class="btn btn-primary mb-2">Add line</button>
+            <button id="line-add-button" type="button" v-on:click="addLine" class="btn btn-primary mb-2">Add line</button>
+        </form>
+        <form class="form-inline">
+            <button v-on:click="removeAll" type="button" class="btn btn-primary mb-2">Delete all</button>
         </form>
     </div>
     <script src="index.js"></script>
