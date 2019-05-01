@@ -17,14 +17,9 @@ var app = new Vue({
             axios.post('/lines', this.newLineName, {
                 headers: { 'Content-Type': 'text/plain' }
             }).
-            then(response => {
-                console.log(response)
-            }).
             catch(error => {
-                if (error.response.status === 500) {
-                    console.log('Error!!!');
-                    alert('Error!!!')
-                }
+                console.log(error.response);
+                this.$bvModal.msgBoxOk('Cannot enter existing string: ' + this.newLineName)
             }).finally(() => this.refreshTable());
         },
         removeAll: function() {
