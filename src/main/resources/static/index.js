@@ -11,7 +11,8 @@ var app = new Vue({
         refreshTable: function() {
             axios.get('/lines').then( value => {
                 this.lines = value.data;
-            })
+            });
+            this.newLineName = '';
         },
         addLine: function () {
             axios.post('/lines', this.newLineName, {
