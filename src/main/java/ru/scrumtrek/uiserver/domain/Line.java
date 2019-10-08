@@ -11,4 +11,5 @@ import java.io.Serializable;
 public class Line implements Serializable {
     @Getter private int lineId;
     @Getter private String lineChars;
+    @Getter private String lineCreateTime;
 }

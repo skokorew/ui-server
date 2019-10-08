@@ -18,7 +18,8 @@
         <div id="lines-table">
             <div data-find="line-row" v-for="line in lines" class="row">
                 <div data-find="line-id" class="col-sm-1">{{ line.lineId }}</div>
-                <div data-find="line-name" class="col-sm-8">{{ line.lineChars }}</div>
+                <div data-find="line-name" class="col-sm-1">{{ line.lineChars }}</div>
+                <div data-find="line-create-time" class="col-sm-8">{{ line.lineCreateTime }}</div>
             </div>
         </div>
         <form class="form-inline">
