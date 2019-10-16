@@ -18,7 +18,7 @@ node {
     }
 
     stage ('Test') {
-        junit allowEmptyResults: true, testResults: 'server-mb_master/target/test-reports/*.xml'
+        junit allowEmptyResults: true, testResults: 'server-mb_master/target/surefire-reports/*.xml'
     }
 
     stage ('Publish build info') {
