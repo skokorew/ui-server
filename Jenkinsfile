@@ -18,11 +18,7 @@ node {
     }
 
     stage ('Test') {
-        //junit allowEmptyResults: true, testResults: 'server-mb_master/target/surefire-reports/*'
-        //withMaven(jdk: 'local_jdk', maven: 'local_mvn', options: [junitPublisher(healthScaleFactor: 1.0)]) {
-            // some block
-        //}
-        junit 'target/surefire-reports/*.xml'
+        junit allowEmptyResults: true, testResults:'target/surefire-reports/*.xml'
     }
 
     stage ('Publish build info') {
