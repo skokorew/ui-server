@@ -3,6 +3,10 @@ node {
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
 
+    stage ('Checkout') {
+        checkout scm
+    }
+
     stage ('Configure') {
         rtMaven.tool = 'local_mvn'
         rtMaven.deployer releaseRepo: 'ext-release-local', snapshotRepo: 'ext-snapshot-local', server: artifactory
