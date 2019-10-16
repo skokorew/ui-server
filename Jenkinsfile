@@ -21,4 +21,8 @@ node {
         artifactory.publishBuildInfo buildInfo
     }
 
+    stage ('Build image') {
+        rtMaven.run pom: 'pom.xml', goals: 'dockerfile:build'
+    }
+
 }
