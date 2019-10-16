@@ -9,7 +9,7 @@ node {
         checkout scm
     }
 
-    stage('SonarQube analysis - 1') {
+    stage('SonarQube analysis') {
         withSonarQubeEnv('local_sonar') {
             sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
         }
