@@ -17,6 +17,10 @@ node {
         buildInfo = rtMaven.run pom: 'pom.xml', goals: 'clean install'
     }
 
+    stage ('Test') {
+        junit allowEmptyResults: true, testResults: 'server-mb_master/target/test-reports/*.xml'
+    }
+
     stage ('Publish build info') {
         artifactory.publishBuildInfo buildInfo
     }
