@@ -1,5 +1,5 @@
 node {
-    def artifactory = Artifactory.newServer 'local_artifactory'
+    def artifactory = Artifactory.server "local_artifactory"
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
 
