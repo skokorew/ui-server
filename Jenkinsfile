@@ -1,4 +1,4 @@
-properties([pipelineTriggers([cron('H/15 * * * *')])])
+properties([pipelineTriggers([pollSCM('H/1 * * * *')])])
 
 node {
     def artifactory = Artifactory.server "local_artifactory"
