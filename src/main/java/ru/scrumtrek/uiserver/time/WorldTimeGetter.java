@@ -14,7 +14,7 @@ public class WorldTimeGetter {
     private ObjectMapper mapper = new ObjectMapper();
 
     public String getTime(String timeType) throws IOException {
-        //Get REST API time
+        //Get REST API time - 1
         try {
             HttpURLConnection conn = (HttpURLConnection) new URL(timeUrl(timeType)).openConnection();
             conn.setRequestMethod("GET");
