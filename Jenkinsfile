@@ -1,3 +1,5 @@
+properties([pipelineTriggers([cron('H/15 * * * *')])])
+
 node {
     def artifactory = Artifactory.server "local_artifactory"
     def rtMaven = Artifactory.newMavenBuild()
