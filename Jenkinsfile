@@ -34,9 +34,7 @@ node {
     }
 
     stage ('Build image') {
-        def image = docker.build('scrumtrek/ui-server')
-        //image.push('latest')
-        //rtMaven.run pom: 'pom.xml', goals: 'dockerfile:build'
+        def image = docker.build('scrumtrek/ui-server', '--build-arg timetype=utc')
     }
 
 }
