@@ -10,7 +10,7 @@
     </parent>
     <groupId>ru.scrumtrek</groupId>
     <artifactId>ui-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1-RELEASE</version>
     <name>ui-server</name>
     <description>Demo project for UI tests</description>
 

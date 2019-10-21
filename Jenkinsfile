@@ -34,7 +34,7 @@ node {
     }
 
     stage ('Build image') {
-        docker.build('scrumtrek/ui-server')//, '--build-arg timetype=utc .')
+        docker.build('scrumtrek/ui-server-prod', '--build-arg timetype=est .')
     }
 
 }
